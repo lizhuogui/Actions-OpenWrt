@@ -72,7 +72,6 @@ jobs:
       run: |
         cd openwrt
         make defconfig
-        echo -e 'CONFIG_GCC_USE_VERSION_12=y' >> .config
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
